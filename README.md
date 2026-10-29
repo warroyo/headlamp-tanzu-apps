@@ -27,7 +27,7 @@ Requires Headlamp Desktop or web version 0.46.0 or compatible, Node.js 22.6+, an
    ```
 
    On Windows, use `%APPDATA%/Headlamp/Config/plugins`.
-3. Enable **Settings → Plugins → Plugin Development Mode**, restart Headlamp, select the VKS cluster, and open **Tanzu Apps** in the sidebar.
+3. Restart Headlamp, select the VKS cluster, and open **Tanzu Apps** in the sidebar.
 
 For local development, run `npm ci`, `npm run build`, and `npm run package`. See [development and release](docs/development.md) for tests, browser validation, and release steps. The archive contains no kubeconfig or credentials.
 

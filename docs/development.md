@@ -17,7 +17,7 @@ npm run package
 
 The Playwright tests require Chromium and a running Headlamp instance with access to Tanzu 11 Pods. Install the browser with `npx playwright install chromium --only-shell`. Set `HEADLAMP_URL` and `HEADLAMP_CLUSTER` to test another instance.
 
-`npm run package` creates `headlamp-tanzu-apps-<version>.tar.gz` for Headlamp Desktop. To install manually, extract the archive into `~/.config/Headlamp/plugins` on Linux or macOS, or `%APPDATA%/Headlamp/Config/plugins` on Windows. Restart Headlamp after enabling Plugin Development Mode.
+`npm run package` creates `headlamp-tanzu-apps-<version>.tar.gz` for Headlamp Desktop. To install manually, extract the archive into `~/.config/Headlamp/plugins` on Linux or macOS, or `%APPDATA%/Headlamp/Config/plugins` on Windows. Restart Headlamp after extracting the archive. Plugin Development Mode is only needed for the separate `npm start` workflow, which loads a local development copy.
 
 ## Release
 
