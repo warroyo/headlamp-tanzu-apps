@@ -24,9 +24,13 @@ jobs:
       - run: python3 -B -m unittest discover -s tests -p '*_test.py'
       - run: npm run package
       - name: Verify release version
+        id: version
         shell: bash
-        run: test "${GITHUB_REF_NAME#v}" = "$(node -p 'require("./package.json").version')"
+        run: |
+          version="$(node -p 'require("./package.json").version')"
+          test "${GITHUB_REF_NAME#v}" = "$version"
+          echo "value=$version" >> "$GITHUB_OUTPUT"
       - uses: softprops/action-gh-release@v2
         with:
           generate_release_notes: true
-          files: headlamp-tanzu-apps-${{ github.ref_name }}.tar.gz
+          files: headlamp-tanzu-apps-${{ steps.version.outputs.value }}.tar.gz
