@@ -19,14 +19,18 @@ The explorer groups live Pods using Tanzu labels. Apps without running Pods and 
 Requires Headlamp Desktop or web version 0.46.0 or compatible, Node.js 22.6+, and npm.
 
 1. Download the [latest desktop plugin archive](https://github.com/warroyo/headlamp-tanzu-apps/releases/latest).
-2. On Linux or macOS, extract it into Headlamp’s plugin directory:
+2. Extract it into Headlamp’s plugin directory:
+
+   - macOS: `~/Library/Application Support/Headlamp/plugins`
+   - Linux: `~/.config/Headlamp/plugins`
+   - Windows: `%APPDATA%/Headlamp/Config/plugins`
+
+   On macOS, for example:
 
    ```sh
-   mkdir -p ~/.config/Headlamp/plugins
-   tar -xzf headlamp-tanzu-apps-*.tar.gz -C ~/.config/Headlamp/plugins
+   mkdir -p "$HOME/Library/Application Support/Headlamp/plugins"
+   tar -xzf headlamp-tanzu-apps-*.tar.gz -C "$HOME/Library/Application Support/Headlamp/plugins"
    ```
-
-   On Windows, use `%APPDATA%/Headlamp/Config/plugins`.
 3. Restart Headlamp, select the VKS cluster, and open **Tanzu Apps** in the sidebar.
 
 For local development, run `npm ci`, `npm run build`, and `npm run package`. See [development and release](docs/development.md) for tests, browser validation, and release steps. The archive contains no kubeconfig or credentials.
