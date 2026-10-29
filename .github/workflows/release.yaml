@@ -18,9 +18,9 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
-      - run: npm run test:bundle
       - run: npm run typecheck
       - run: npm run build
+      - run: npm run test:bundle
       - run: python3 -B -m unittest discover -s tests -p '*_test.py'
       - run: npm run package
       - name: Verify release version
