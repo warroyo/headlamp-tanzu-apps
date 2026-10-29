@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.tar.gz
+cluster-metadata*.json
+*.kubeconfig
+__pycache__/
+test-results/
+playwright-report/

@@ -1,0 +1,33 @@
+{
+  "name": "headlamp-tanzu-apps",
+  "version": "0.2.0",
+  "description": "Application names and context for Tanzu workloads in Headlamp",
+  "private": true,
+  "type": "module",
+  "main": "dist/main.js",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "start": "headlamp-plugin start",
+    "build": "headlamp-plugin build",
+    "package": "headlamp-plugin package",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "collect": "python3 scripts/collect-metadata.py",
+    "test:bundle": "node --test tests/bundle.test.mjs",
+    "test:e2e": "playwright test tests/explorer.spec.ts --workers=1 --reporter=list"
+  },
+  "devDependencies": {
+    "@kinvolk/headlamp-plugin": "^0.14.0",
+    "@playwright/test": "^1.64.1",
+    "@types/react": "^18.3.0",
+    "react": "^18.3.1",
+    "typescript": "^5.8.3"
+  },
+  "headlamp": {
+    "extraDist": {
+      "package.json": "package.json"
+    }
+  }
+}

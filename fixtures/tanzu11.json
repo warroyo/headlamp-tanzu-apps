@@ -1,0 +1,20 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "name": "lrp-example-instance",
+    "namespace": "space-example",
+    "labels": {
+      "tanzu.vmware.com/app": "orders-api",
+      "tanzu.vmware.com/app_id": "app-example",
+      "tanzu.vmware.com/organization_name": "engineering",
+      "tanzu.vmware.com/organization_id": "org-example",
+      "tanzu.vmware.com/space_name": "development",
+      "tanzu.vmware.com/space_id": "space-example",
+      "tanzu.vmware.com/process_type": "web",
+      "tanzu.vmware.com/instance_index": "0",
+      "tanzu.vmware.com/managed-by": "rep",
+      "tanzu.vmware.com/lifecycle": "lrp"
+    }
+  }
+}
